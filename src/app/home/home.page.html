@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Plano de Leitura
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">
+        Plano de Leitura
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card *ngFor="let item of data">
+    <ion-card-header>
+      <ion-card-subtitle>{{item.periodo}}</ion-card-subtitle>
+      <ion-card-title>{{item.name}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{item.descricao}}
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>
